@@ -4,7 +4,9 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.math.FlxPoint;
+import flixel.system.FlxSplash;
 import flixel.util.FlxColor;
+import haxe.Json;
 import openfl.display.Sprite;
 
 class Player extends FlxSprite
@@ -13,38 +15,79 @@ class Player extends FlxSprite
 
 	var spriteFramerate = 10;
 
-	//for sprites
+	// player animations
 	var spr_idle_right:FlxSprite;
 	var spr_idle_left:FlxSprite;
+	var spr_idle_down_right:FlxSprite;
+	var spr_idle_down_left:FlxSprite;
+	var spr_idle_up_right:FlxSprite;
+	var spr_idle_up_left:FlxSprite;
+
+	var spr_running_right:FlxSprite;
+	var spr_running_left:FlxSprite;
+	var spr_running_down_right:FlxSprite;
+	var spr_running_down_left:FlxSprite;
+	var spr_running_up_right:FlxSprite;
+	var spr_running_up_left:FlxSprite;
 
 	public function new(x:Float = 0, y:Float  = 0)
 	{
 		super(x,y); // call FlxSprite constructor and pass in x and y
-		
+
+
 		///////Player animation & sprites/////////////////////
-		//TODO: Create super texture atlas with all the animations. Looks like it only can do "loadgraphic one at a time"
+		//---------------idle animations--------------------
 
-		//sprites
-		//idle right
-		loadGraphic(AssetPaths.spr_player_idle_right_strip22__png,true, 16,24);
-		animation.add("idle_right", [0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21], spriteFramerate, true);
-		
-		
-		//idle left
-		loadGraphic(AssetPaths.spr_player_idle_left_strip22__png, true, 16, 24);
-		animation.add("idle_left", [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], spriteFramerate, true);
+		// idle right
+		spr_idle_right.loadGraphic(AssetPaths.spr_player_idle_right_strip22__png, true, 16, 24);
+		spr_idle_right.animation.add("idle_right", [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], spriteFramerate, true);
 
-		
-		//---------------running--------------------
+		// idle left
+		spr_idle_left.loadGraphic(AssetPaths.spr_player_idle_left_strip22__png, true, 16, 24);
+		spr_idle_left.animation.add("idle_left", [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], spriteFramerate, true);
+
+		// idle up left
+		spr_idle_up_left.loadGraphic(AssetPaths.spr_player_idle_up_left_strip22__png, true, 16, 24);
+		spr_idle_up_left.animation.add("idle_up_left", [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], spriteFramerate, true);
+
+		// idle up right
+		spr_idle_up_right.loadGraphic(AssetPaths.spr_player_idle_up_right_strip22__png, true, 16, 24);
+		spr_idle_up_right.animation.add("idle_up_right", [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], spriteFramerate,
+			true);
+
+		// Idle down left
+		spr_idle_down_left.loadGraphic(AssetPaths.spr_player_idle_down_left_strip22__png, true, 16, 24);
+		spr_idle_down_left.animation.add("idle_down_left", [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], spriteFramerate,
+			true);
+
+		// idle down right
+		spr_idle_down_right.loadGraphic(AssetPaths.spr_player_idle_down_right_strip22__png, true, 16, 24);
+		spr_idle_down_right.animation.add("idle_down_right", [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], spriteFramerate,
+			true);
+
+		//---------------running animations--------------------
 
 		//running right
-		loadGraphic(AssetPaths.spr_player_running_right_strip8__png,true, 16,26);
-		animation.add("running_right",[0,1,2,3,4,5,6,7],spriteFramerate,true);
+		spr_running_left.loadGraphic(AssetPaths.spr_player_running_left_strip8__png, true, 16, 26);
+		spr_running_left.animation.add("running_left", [0, 1, 2, 3, 4, 5, 6, 7], spriteFramerate, true);
 
+		spr_running_right.loadGraphic(AssetPaths.spr_player_running_right_strip8__png, true, 16, 26);
+		spr_running_right.animation.add("running_right", [0, 1, 2, 3, 4, 5, 6, 7], spriteFramerate, true);
 
-		setFacingFlip(FlxObject.LEFT, true,false);
-		setFacingFlip(FlxObject.RIGHT, false,false);
-		
+		// running down
+		spr_running_down_left.loadGraphic(AssetPaths.spr_player_running_down_left_strip8__png, true, 16, 26);
+		spr_running_down_left.animation.add("running_down_left", [0, 1, 2, 3, 4, 5, 6, 7], spriteFramerate, true);
+
+		spr_running_down_right.loadGraphic(AssetPaths.spr_player_running_down_right_strip8__png, true, 16, 26);
+		spr_running_down_right.animation.add("running_down_right", [0, 1, 2, 3, 4, 5, 6, 7], spriteFramerate, true);
+
+		// running up
+		spr_running_up_right.loadGraphic(AssetPaths.spr_player_running_up_right_strip8__png, true, 16, 26);
+		spr_running_up_right.animation.add("running_up_right", [0, 1, 2, 3, 4, 5, 6, 7], spriteFramerate, true);
+
+		spr_running_up_left.loadGraphic(AssetPaths.spr_player_running_up_left_strip8__png, true, 16, 26);
+		spr_running_up_left.animation.add("running_up_left", [0, 1, 2, 3, 4, 5, 6, 7], spriteFramerate, true);
+
 		//////////////////////////////////////////////
 
 		//Natural player slowdown
