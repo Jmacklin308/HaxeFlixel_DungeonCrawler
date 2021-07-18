@@ -110,6 +110,7 @@ class Player extends FlxSprite
 					{
 						newAngle += 45;
 				}
+				facing = FlxObject.UP;
 			}
 			else if (down)
 			{
@@ -122,14 +123,17 @@ class Player extends FlxSprite
 				{
 					newAngle -= 45;
 				}
+				facing = FlxObject.DOWN;
 			}
 			else if (left)
 				{
 				newAngle = 180;
+				facing = FlxObject.LEFT;
 				}
 			else if (right)
 				{
 				newAngle = 0;
+				facing = FlxObject.RIGHT;
 				}
 			//endregion
 
@@ -138,6 +142,28 @@ class Player extends FlxSprite
 			velocity.rotate(FlxPoint.weak(0, 0), newAngle); // like point direction in gms
 
 		}
+		// if we are moving change the sprites according to the direction
+		if ((velocity.x != 0 || velocity.y != 0) && touching == FlxObject.NONE)
+		{
+			switch (facing)
+			{
+				case FlxObject.LEFT:
+					animation.play("running_left");
+				case FlxObject.RIGHT:
+					animation.play("running_right");
+				case FlxObject.DOWN:
+					animation.play("running_down_right");
+				case FlxObject.UP:
+					animation.play("running_up_right");
+			}
+		}
+		else
+		{
+			animation.play("idle_right");
+		}
+
+
+
 	}
 
 
