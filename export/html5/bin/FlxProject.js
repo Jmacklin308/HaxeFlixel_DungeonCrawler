@@ -913,13 +913,13 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "33";
+	app.meta.h["build"] = "2";
 	app.meta.h["company"] = "HaxeFlixel";
 	app.meta.h["file"] = "FlxProject";
 	app.meta.h["name"] = "FlxProject";
 	app.meta.h["packageName"] = "com.example.myapp";
 	app.meta.h["version"] = "0.0.1";
-	var attributes = { allowHighDPI : false, alwaysOnTop : false, borderless : false, element : null, frameRate : 60, height : 720, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : false, title : "FlxProject", width : 1280, x : null, y : null};
+	var attributes = { allowHighDPI : false, alwaysOnTop : false, borderless : false, element : null, frameRate : 60, height : 480, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : false, title : "FlxProject", width : 720, x : null, y : null};
 	attributes.context = { antialiasing : 0, background : 0, colorDepth : 32, depth : true, hardware : true, stencil : true, type : null, vsync : true};
 	if(app.__window == null) {
 		if(config != null) {
@@ -3892,7 +3892,7 @@ ManifestResources.init = function(config) {
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
 	var bundle;
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y37:assets%2Fimages%2FPlayer%2Fplayer.pngR2i1876R3y5:IMAGER5R7R6tgoR0y64:assets%2Fimages%2FPlayer%2Fspr_player_idle_down_left_strip22.pngR2i574R3R8R5R9R6tgoR0y65:assets%2Fimages%2FPlayer%2Fspr_player_idle_down_right_strip22.pngR2i556R3R8R5R10R6tgoR0y59:assets%2Fimages%2FPlayer%2Fspr_player_idle_left_strip22.pngR2i544R3R8R5R11R6tgoR0y60:assets%2Fimages%2FPlayer%2Fspr_player_idle_right_strip22.pngR2i544R3R8R5R12R6tgoR0y62:assets%2Fimages%2FPlayer%2Fspr_player_idle_up_left_strip22.pngR2i453R3R8R5R13R6tgoR0y63:assets%2Fimages%2FPlayer%2Fspr_player_idle_up_right_strip22.pngR2i456R3R8R5R14R6tgoR0y66:assets%2Fimages%2FPlayer%2Fspr_player_running_down_left_strip8.pngR2i522R3R8R5R15R6tgoR0y67:assets%2Fimages%2FPlayer%2Fspr_player_running_down_right_strip8.pngR2i526R3R8R5R16R6tgoR0y61:assets%2Fimages%2FPlayer%2Fspr_player_running_left_strip8.pngR2i652R3R8R5R17R6tgoR0y62:assets%2Fimages%2FPlayer%2Fspr_player_running_right_strip8.pngR2i662R3R8R5R18R6tgoR0y64:assets%2Fimages%2FPlayer%2Fspr_player_running_up_left_strip8.pngR2i488R3R8R5R19R6tgoR0y65:assets%2Fimages%2FPlayer%2Fspr_player_running_up_right_strip8.pngR2i490R3R8R5R20R6tgoR0y39:assets%2Fimages%2Fspr_bullet_strip2.pngR2i133R3R8R5R21R6tgoR0y35:assets%2Fimages%2Fspr_crosshair.pngR2i418R3R8R5R22R6tgoR0y30:assets%2Fimages%2Fspr_dirt.pngR2i281R3R8R5R23R6tgoR0y30:assets%2Fimages%2Fspr_lava.pngR2i368R3R8R5R24R6tgoR0y28:assets%2Fimages%2Fspr_mg.pngR2i162R3R8R5R25R6tgoR0y47:assets%2Fimages%2Fspr_round_pounder_strip14.pngR2i838R3R8R5R26R6tgoR0y38:assets%2Fimages%2Fspr_wall_strip10.pngR2i315R3R8R5R27R6tgoR0y36:assets%2Fmusic%2Fmusic-goes-here.txtR2zR3R4R5R28R6tgoR0y36:assets%2Fsounds%2Fsounds-go-here.txtR2zR3R4R5R29R6tgoR2i2114R3y5:MUSICR5y26:flixel%2Fsounds%2Fbeep.mp3y9:pathGroupaR31y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R30R5y28:flixel%2Fsounds%2Fflixel.mp3R32aR34y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3y5:SOUNDR5R33R32aR31R33hgoR2i33629R3R36R5R35R32aR34R35hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R37R38y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R43R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R44R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y41:assets%2Fimages%2Fplayer_spritesheet.jsonR2i53532R3R4R5R7R6tgoR0y40:assets%2Fimages%2Fplayer_spritesheet.pngR2i6050R3y5:IMAGER5R8R6tgoR0y39:assets%2Fimages%2Fspr_bullet_strip2.pngR2i133R3R9R5R10R6tgoR0y35:assets%2Fimages%2Fspr_crosshair.pngR2i418R3R9R5R11R6tgoR0y30:assets%2Fimages%2Fspr_dirt.pngR2i281R3R9R5R12R6tgoR0y30:assets%2Fimages%2Fspr_lava.pngR2i368R3R9R5R13R6tgoR0y28:assets%2Fimages%2Fspr_mg.pngR2i162R3R9R5R14R6tgoR0y55:assets%2Fimages%2Fspr_player_idle_down_left_strip22.pngR2i574R3R9R5R15R6tgoR0y56:assets%2Fimages%2Fspr_player_idle_down_right_strip22.pngR2i556R3R9R5R16R6tgoR0y50:assets%2Fimages%2Fspr_player_idle_left_strip22.pngR2i544R3R9R5R17R6tgoR0y51:assets%2Fimages%2Fspr_player_idle_right_strip22.pngR2i544R3R9R5R18R6tgoR0y53:assets%2Fimages%2Fspr_player_idle_up_left_strip22.pngR2i453R3R9R5R19R6tgoR0y54:assets%2Fimages%2Fspr_player_idle_up_right_strip22.pngR2i456R3R9R5R20R6tgoR0y57:assets%2Fimages%2Fspr_player_running_down_left_strip8.pngR2i522R3R9R5R21R6tgoR0y58:assets%2Fimages%2Fspr_player_running_down_right_strip8.pngR2i526R3R9R5R22R6tgoR0y52:assets%2Fimages%2Fspr_player_running_left_strip8.pngR2i652R3R9R5R23R6tgoR0y53:assets%2Fimages%2Fspr_player_running_right_strip8.pngR2i662R3R9R5R24R6tgoR0y55:assets%2Fimages%2Fspr_player_running_up_left_strip8.pngR2i488R3R9R5R25R6tgoR0y56:assets%2Fimages%2Fspr_player_running_up_right_strip8.pngR2i490R3R9R5R26R6tgoR0y47:assets%2Fimages%2Fspr_round_pounder_strip14.pngR2i838R3R9R5R27R6tgoR0y38:assets%2Fimages%2Fspr_wall_strip10.pngR2i315R3R9R5R28R6tgoR0y36:assets%2Fmusic%2Fmusic-goes-here.txtR2zR3R4R5R29R6tgoR0y36:assets%2Fsounds%2Fsounds-go-here.txtR2zR3R4R5R30R6tgoR2i2114R3y5:MUSICR5y26:flixel%2Fsounds%2Fbeep.mp3y9:pathGroupaR32y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R31R5y28:flixel%2Fsounds%2Fflixel.mp3R33aR35y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3y5:SOUNDR5R34R33aR32R34hgoR2i33629R3R37R5R36R33aR35R36hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R38R39y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R9R5R44R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R9R5R45R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -7470,23 +7470,30 @@ var Player = function(x,y) {
 	}
 	this.spriteFramerate = 10;
 	flixel_FlxSprite.call(this,x,y);
-	this.makeGraphic(30,30,-65536);
-	this.loadGraphic("assets/images/Player/spr_player_idle_right_strip22.png",true,16,24);
-	this.animation.add("idle_right",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
-	this.loadGraphic("assets/images/Player/spr_player_idle_left_strip22.png",true,16,24);
-	this.animation.add("idle_left",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
-	this.loadGraphic("assets/images/Player/spr_player_idle_up_right_strip22.png",true,16,24);
-	this.animation.add("idle_up_right",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
-	this.loadGraphic("assets/images/Player/spr_player_idle_down_right_strip22.png",true,16,24);
-	this.animation.add("idle_down_right",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
-	this.loadGraphic("assets/images/Player/spr_player_idle_up_left_strip22.png",true,16,24);
-	this.animation.add("idle_up_left",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
-	this.loadGraphic("assets/images/Player/spr_player_idle_down_left_strip22.png",true,16,24);
-	this.animation.add("idle_up_right",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
-	this.loadGraphic("assets/images/Player/spr_player_running_right_strip8.png",true,16,26);
-	this.animation.add("running_right",[0,1,2,3,4,5,6,7],this.spriteFramerate,true);
-	this.loadGraphic("assets/images/Player/spr_player_running_left_strip8.png",true,16,26);
-	this.animation.add("running_left",[0,1,2,3,4,5,6,7],this.spriteFramerate,true);
+	this.spr_idle_right.loadGraphic("assets/images/Player/spr_player_idle_right_strip22.png",true,16,24);
+	this.spr_idle_right.animation.add("idle_right",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
+	this.spr_idle_left.loadGraphic("assets/images/Player/spr_player_idle_left_strip22.png",true,16,24);
+	this.spr_idle_left.animation.add("idle_left",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
+	this.spr_idle_up_left.loadGraphic("assets/images/Player/spr_player_idle_up_left_strip22.png",true,16,24);
+	this.spr_idle_up_left.animation.add("idle_up_left",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
+	this.spr_idle_up_right.loadGraphic("assets/images/Player/spr_player_idle_up_right_strip22.png",true,16,24);
+	this.spr_idle_up_right.animation.add("idle_up_right",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
+	this.spr_idle_down_left.loadGraphic("assets/images/Player/spr_player_idle_down_left_strip22.png",true,16,24);
+	this.spr_idle_down_left.animation.add("idle_down_left",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
+	this.spr_idle_down_right.loadGraphic("assets/images/Player/spr_player_idle_down_right_strip22.png",true,16,24);
+	this.spr_idle_down_right.animation.add("idle_down_right",[0,1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20,21],this.spriteFramerate,true);
+	this.spr_running_left.loadGraphic("assets/images/Player/spr_player_running_left_strip8.png",true,16,26);
+	this.spr_running_left.animation.add("running_left",[0,1,2,3,4,5,6,7],this.spriteFramerate,true);
+	this.spr_running_right.loadGraphic("assets/images/Player/spr_player_running_right_strip8.png",true,16,26);
+	this.spr_running_right.animation.add("running_right",[0,1,2,3,4,5,6,7],this.spriteFramerate,true);
+	this.spr_running_down_left.loadGraphic("assets/images/Player/spr_player_running_down_left_strip8.png",true,16,26);
+	this.spr_running_down_left.animation.add("running_down_left",[0,1,2,3,4,5,6,7],this.spriteFramerate,true);
+	this.spr_running_down_right.loadGraphic("assets/images/Player/spr_player_running_down_right_strip8.png",true,16,26);
+	this.spr_running_down_right.animation.add("running_down_right",[0,1,2,3,4,5,6,7],this.spriteFramerate,true);
+	this.spr_running_up_right.loadGraphic("assets/images/Player/spr_player_running_up_right_strip8.png",true,16,26);
+	this.spr_running_up_right.animation.add("running_up_right",[0,1,2,3,4,5,6,7],this.spriteFramerate,true);
+	this.spr_running_up_left.loadGraphic("assets/images/Player/spr_player_running_up_left_strip8.png",true,16,26);
+	this.spr_running_up_left.animation.add("running_up_left",[0,1,2,3,4,5,6,7],this.spriteFramerate,true);
 	this.drag.set_x(this.drag.set_y(1600));
 };
 $hxClasses["Player"] = Player;
@@ -7496,6 +7503,16 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 	spriteFramerate: null
 	,spr_idle_right: null
 	,spr_idle_left: null
+	,spr_idle_down_right: null
+	,spr_idle_down_left: null
+	,spr_idle_up_right: null
+	,spr_idle_up_left: null
+	,spr_running_right: null
+	,spr_running_left: null
+	,spr_running_down_right: null
+	,spr_running_down_left: null
+	,spr_running_up_right: null
+	,spr_running_up_left: null
 	,updateMovment: function() {
 		var up = false;
 		var down = false;
@@ -7568,16 +7585,19 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			if((this.velocity.x != 0 || this.velocity.y != 0) && this.touching == 0) {
 				switch(this.facing) {
 				case 1:
-					this.animation.play("running_left");
+					this.spr_running_left.animation.play("running_left");
 					break;
 				case 16:
-					this.animation.play("running_right");
+					this.spr_running_right.animation.play("running_right");
+					break;
+				case 256:
+					this.spr_running_up_left.animation.play("running_up_left");
+					this.spr_running_up_right.animation.play("running_up_right");
+					break;
+				case 4096:
+					this.animation.play("running_down_right");
 					break;
 				}
-			} else if(this.facing == 16) {
-				this.animation.play("idle_right");
-			} else if(this.facing == 1) {
-				this.animation.play("idle_left");
 			}
 		}
 	}
@@ -69674,7 +69694,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 325243;
+	this.version = 957631;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -116388,6 +116408,7 @@ openfl_display_DisplayObject.__tempStack = new lime_utils_ObjectPool(function() 
 	stack.set_length(0);
 });
 AssetPaths.data_goes_here__txt = "assets/data/data-goes-here.txt";
+AssetPaths.player__png = "assets/images/Player/player.png";
 AssetPaths.spr_player_idle_down_left_strip22__png = "assets/images/Player/spr_player_idle_down_left_strip22.png";
 AssetPaths.spr_player_idle_down_right_strip22__png = "assets/images/Player/spr_player_idle_down_right_strip22.png";
 AssetPaths.spr_player_idle_left_strip22__png = "assets/images/Player/spr_player_idle_left_strip22.png";
